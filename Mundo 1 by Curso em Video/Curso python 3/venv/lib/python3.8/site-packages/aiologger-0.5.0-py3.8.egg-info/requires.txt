@@ -1,0 +1,3 @@
+
+[aiofiles]
+aiofiles==0.4.0

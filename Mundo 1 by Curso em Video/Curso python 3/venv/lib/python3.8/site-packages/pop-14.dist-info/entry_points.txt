@@ -1,0 +1,3 @@
+[console_scripts]
+pop-seed = pop.scripts:pop_seed
+

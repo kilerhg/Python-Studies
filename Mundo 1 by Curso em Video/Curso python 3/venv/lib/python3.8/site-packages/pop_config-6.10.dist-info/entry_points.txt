@@ -1,0 +1,3 @@
+[console_scripts]
+conf = conf.scripts:start
+
