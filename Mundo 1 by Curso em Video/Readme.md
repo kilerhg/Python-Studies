@@ -1,9 +1,9 @@
 # Curso python mundo 1 By [Curso em Video](https://cursoemvideo.com)
 ## Anotações gerais
-len() - conta número de itens dentro de uma variável
-lista se escreve com []
-choice : escolhe um item dentro de uma lista
-Refinamento sucessivo : particionar um aplicação e realizar testes em quando desenvolve, para por exemplo evitar erros no começo meio, e corrigi los enquanto em fase de desenvolvimento.
+len() - conta número de itens dentro de uma variável<br />
+lista se escreve com []<br />
+choice : escolhe um item dentro de uma lista<br />
+Refinamento sucessivo : particionar um aplicação e realizar testes em quando desenvolve, para por exemplo evitar erros no começo meio, e corrigi los enquanto em fase de desenvolvimento.<br />
 ## Tipos de variáveis / Tipos primitivos
  * int - inteiro
 * bool - booleano / true , false
