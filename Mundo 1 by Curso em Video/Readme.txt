@@ -1,4 +1,4 @@
-﻿Curso python mundo 1 by curso em vídeo
+**Curso python mundo 1 by curso em vídeo**
 Pesquisar
 Openpyxl, pandas e xrld
 Anotações gerais
