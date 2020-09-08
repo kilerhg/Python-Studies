@@ -2,11 +2,11 @@
 
 vcasa = float(input('Digite o valor da casa:'))
 salario = float(input('Digite o seu salario:'))
-anos = int(input('Digite em quantos anos deseja pagar'))
+anos = int(input('Digite em quantos anos deseja pagar:'))
 
-prestacao = vcasa / anos
+prestacao = (vcasa / anos)
 
-if ((salario * 0.7)*12) > prestacao:
+if ((salario * 0.3)*12) >= prestacao:
     print('Emprestimo Aceito')
 else:
     print('Emprestimo Negado')
