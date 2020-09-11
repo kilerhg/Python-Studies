@@ -10,7 +10,6 @@ for x in range(1,len(f)+1):
     # print(f[x-1],f[xx-1])
     if f[x-1] == f[xx-1]:
         sm += 1
-    print(f[x-1],f[xx-1])
 if sm == len(f):
     print('Está frase é um Palindromo')
 else:
