@@ -10,4 +10,4 @@ while flag not in 'Ss':
     sm += n
     ct += 1
     ls.append(n)
-print(f'A media dos Numeros Digitados é: {sm/ct}\nO maior numero digitado é:{max(ls)}\nO menor Numero Digitado: {min(ls)}')
+print(f'A media dos Numeros Digitados é: {sm/ct}\nO maior numero digitado é: {max(ls)}\nO menor Numero Digitado: {min(ls)}')

@@ -8,7 +8,11 @@ while not vpc == vus:
     print('= ='*10)
     vus = int(input('Tente Advinhar o Numero Que o computador está pensando:'))
     if vpc != vus:
-        print(f'{vus} não é o numero que pensei, Continue Tentando!!')
+        if vpc > vus:
+            print(f'{vus} não é o numero que pensei, Tente um Maior ;)!!')
+        else:
+            print(f'{vus} não é o numero que pensei, Tente um Menor!!')
+
     sm += 1
 print(f'Parabens {vus} é o Numero que pensei, Você precisou apenas de {sm} Tentativas')
 

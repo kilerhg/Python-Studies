@@ -2,7 +2,7 @@
 
 nf = int(input('Digite a quantidade de numeros da Sequencia Fibonnaci desejado:'))
 cf = 0
-n1 = 1
+n1 = 0
 n2 = 1
 n3 = n1+n2
 while cf != nf:
@@ -14,8 +14,4 @@ while cf != nf:
     n2 = n3
     n3 = n1+n2
     cf += 1
-
-
-
-#print(f'Teste : {n1} {n2} {n3}')
 
