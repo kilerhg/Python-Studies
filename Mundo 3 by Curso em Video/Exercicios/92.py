@@ -5,6 +5,7 @@
 from datetime import datetime
 anoa = datetime.today().year
 
+
 pessoa = {}
 pessoa['nome'] = str(input('Digite seu nome:')).strip().capitalize()
 anon = int(input('Digite o ano de nascimento:'))
@@ -14,7 +15,7 @@ pessoa['ctps'] = int(input('Digite a sua carteira de trabalho (0 caso não tenha
 if pessoa['ctps'] != 0:
     anoc = int(input('Digite o ano de contratação:'))
     pessoa['Tempo Servico'] = anoa - anoc
-    pessoa['Salario'] = int(input('Digite seu Salario:'))
+    pessoa['Salario'] = float(input('Digite seu Salario:'))
     pessoa['idade Aposentar'] = pessoa['idade'] + (35 - pessoa['Tempo Servico'])
 print(f'{"Perfil Pessoal":-^35}')
 for k,v in pessoa.items():

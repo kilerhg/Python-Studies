@@ -37,14 +37,3 @@ while True:
         for pos, x in enumerate(jogadores[flag]['gols']):
             print(f'        Na partida {pos} Foram : {x} Gols!!')
         print()
-
-'''
-print(f'{"-="*10} Relatorio {"=-"*10}\n')
-print(f' O jogador {jogador["nome"]} Jogou {jogador["partidas"]} Partidas \n')
-for pos,x in enumerate(gols):
-    print(f'        Na partida {pos} Foram : {x} Gols!!')
-print()
-print(f' Sendo no total {jogador["total"]} Gols')
-print()
-print(f'{"-="*10} Relatorio {"=-"*10}\n')
-'''

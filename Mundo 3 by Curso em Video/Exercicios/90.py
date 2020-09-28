@@ -4,7 +4,7 @@ aluno['Nome'] = str(input('Digite seu Nome:'))
 aluno['Media'] = float(input('Digite A Media:'))
 if aluno['Media'] < 5:
     aluno['situacao'] = 'Reprovado'
-elif 5 < aluno['Media'] < 7:
+elif 5 <= aluno['Media'] < 7:
     aluno['situacao'] = 'Recuperação'
 elif 7 < aluno['Media']:
     aluno['situacao'] = 'Aprovado'
