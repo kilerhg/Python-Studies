@@ -4,9 +4,8 @@
 from random import randint
 
 
-
 def sortear(lista):
-    for x in range(0,5):
+    for x in range(0, 5):
         numeros.append(randint(1, 10))
     # return numeros
 
@@ -16,6 +15,10 @@ def somapar(numeros):
     for x in numeros:
         if (x % 2) == 0:
             s += x
+
+
+
+
     print(f'A soma dos pares é {s}')
 
 numeros = []
