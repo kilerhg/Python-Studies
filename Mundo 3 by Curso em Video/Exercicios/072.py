@@ -10,3 +10,4 @@ while not flag == 'N':
     if flag not in 'SN':
         while flag not in 'SN':
             flag = str(input('Você deseja continuar?: [S/N]:')).strip().upper()[0]
+
