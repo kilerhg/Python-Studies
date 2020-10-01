@@ -32,7 +32,6 @@ toda função abre e fecha parênteses após o nome ex: f()<br />
 1. :**
 1. :*,/,//,%
 1. :+,-
-2. 
 ## Anotações Print
 
 dentro de um print com f string ou .format pode se utilizar ```:.3f``` dentro das chaves para definir apenas 3 número após o ponto flutuante<br />
