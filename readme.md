@@ -1,5 +1,98 @@
 # Anotações Python
 
+## Sumário
+
+* [Anotações Python](#anotações-python)
+* [Sumário](#sumário)
+* [Anotações Gerais](#anotações-gerais)
+* [Tipos Primitivos](#tipos-primitivos)
+* [Operações Aritméticas](#operações-aritméticas)
+* [Ordem De Precedência](#ordem-de-precedência)
+* [Anotações Print](#anotações-print)
+* [Bibliotecas](#bibliotecas)
+* [Math](#math)
+* [Random](#random)
+* [Time](#time)
+* [Datetime](#datetime)
+* [Operator](#operator)
+* [Urllib](#urllib)
+* [Manipulação De Texto](#manipulação-de-texto)
+* [Localização](#localização)
+* [Transformações](#transformações)
+* [Divisão](#divisão)
+* [Junção](#junção)
+* [Estrutura Condicional Simples E Composta](#estrutura-condicional-simples-e-composta)
+* [Tipos](#tipos)
+* [Sequencial](#sequencial)
+* [Pythonizar](#pythonizar)
+* [Simples](#simples)
+* [Composto](#composto)
+* [Ninhadas](#ninhadas)
+* [If](#if)
+* [Estrutura De Repetição Ou Laços Ou Iterações](#estrutura-de-repetição-ou-laços-ou-iterações)
+* [Laço Com Variável De Controle](#laço-com-variável-de-controle)
+* [For](#for)
+* [Laço Com Teste Lógico](#laço-com-teste-lógico)
+* [While](#while)
+* [Coleções](#coleções)
+* [Anotações](#anotações)
+* [Tuplas](#tuplas)
+* [Listas](#listas)
+* [Dicionários](#dicionários)
+* [Cores No Terminal Python](#cores-no-terminal-python)
+* [Ansi](#ansi)
+* [Style](#style)
+* [Text](#text)
+* [Back](#back)
+* [Conversão Base De Dados](#conversão-base-de-dados)
+* [Funções](#funções)
+* [O Que É](#o-que-é)
+* [Declaração Basica Função Sem Parâmetros](#declaração-basica-função-sem-parâmetros)
+* [Declaração Basica Função Com Parâmetros](#declaração-basica-função-com-parâmetros)
+* [Empacotar Parâmetros - Receba Vários Parâmetros](#empacotar-parâmetros---receba-vários-parâmetros)
+* [Interactive Help](#interactive-help)
+* [Docstrings](#docstrings)
+* [O Que É](#o-que-é)
+* [Como Criar](#como-criar)
+* [Exemplo](#exemplo)
+* [Parâmetros Opcionais](#parâmetros-opcionais)
+* [O Que É](#o-que-é)
+* [Como Criar](#como-criar)
+* [Exemplo](#exemplo)
+* [Escopo De Variáveis](#escopo-de-variáveis)
+* [Definição Escopo](#definição-escopo)
+* [Escopo Local](#escopo-local)
+* [Escopo Global](#escopo-global)
+* [Dica](#dica)
+* [Exemplo](#exemplo)
+* [Retorno De Resultados](#retorno-de-resultados)
+* [Como Criar](#como-criar)
+* [Exemplo](#exemplo)
+* [Modularização](#modularização)
+* [O Que É](#o-que-é)
+* [Focos](#focos)
+* [Como Criar](#como-criar)
+* [Vantagens](#vantagens)
+* [Pacotes](#pacotes)
+* [O Que É](#o-que-é)
+* [Como Criar](#como-criar)
+* [Quando Utilizar](#quando-utilizar)
+* [Tratamento De Erros E Exceções](#tratamento-de-erros-e-exceções)
+* [Tipos De Erros](#tipos-de-erros)
+* [Sintaxe](#sintaxe)
+* [Exceção](#exceção)
+* [Tratamento De Erro](#tratamento-de-erro)
+* [O Que É](#o-que-é)
+* [Como Criar](#como-criar)
+* [Exemplo](#exemplo)
+* [Except](#except)
+* [Manipulação De Arquivo Txt](#manipulação-de-arquivo-txt)
+* [Preparar Para Ler Salvar Substituir](#preparar-para-ler-salvar-substituir)
+* [Parâmetros Para Criar Ler](#parâmetros-para-criar-ler)
+* [Salvar Texto](#salvar-texto)
+* [Ler Arquivo De Texto](#ler-arquivo-de-texto)
+
+
 ## Anotações gerais
 Refinamento sucessivo : particionar um aplicação e realizar testes em quando desenvolve, para por exemplo evitar erros no começo meio, e corrigi los enquanto em fase de desenvolvimento.<br />
 Inverter string digitada com : ```var[::-1]```
@@ -10,7 +103,7 @@ reverse = True - torna algumas funções invertidas ex: ```L.sort()```
 função == Método<br />
 toda função abre e fecha parênteses após o nome ex: f()<br />
 
-## Tipos de variáveis / Tipos primitivos
+## Tipos Primitivos
 * int - inteiro
 * bool - booleano / true , false
 * float - números com vírgula
@@ -73,7 +166,7 @@ f string - ```f‘teste : {variável}’```
 ```urllib.request.urlopen( Url de algum site )``` - tenta acessar algum site<br />
 ```variavel_com_url_site.getcode()``` - Retorna um código para a tentativa de acesso sendo 200 bem sucedido.<br />
 
-## Manipulação de texto / Variável Composta
+## Manipulação de texto
 
 ### Localização
 
@@ -144,7 +237,7 @@ Condições dentro de condições<br />
 
 ### Laço com teste lógico
 
-#### While (Loop enquanto verdadeiro)
+#### While
 ```while not``` (Valor Booleano):<br />
 ```while true```: loop infinito<br />
 ```break``` - interrompe o laço de repetição<br />
@@ -152,18 +245,22 @@ Condições dentro de condições<br />
 
 
 
-## Agrupamentos/Coleções Listas, Dicionários E  Tuplas
+## Coleções
 
 ### Anotações
 
 Você pode interpolar as coleções, por exemplo: Dicionários Dentro de listas<br />
 
-### Tuplas ()
+### Tuplas
+
+Caracter - ()
 
 Tuplas são Imutaveis
 ```sorted(T```) - ordena a tupla porém não armazena o valor, para guardar usar variável<br />
 
-### Listas []
+### Listas
+
+Caracter - []
 
 ```sum(L)``` - soma todos os valores de uma lista<br />
 ```L.append()``` - adiciona um valor na lista<br />
@@ -184,7 +281,9 @@ Tuplas são Imutaveis
 ```L.clear()``` - Limpa uma lista<br />
 ```L.choice``` - Escolhe um item aleatoriamente dentro da lista<br />
 
-### Dicionários {}
+### Dicionários
+
+Caracter - {}
 
 Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br />
 
@@ -196,18 +295,17 @@ Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br 
 ```D.copy()``` - Copia os valores de um dicionário sem fazer relação, (para utilização em laços e ETC)<br />
 ```D1 = sorted(D2.items(), key=itemgetter(índice do dicionário sendo 0 as keys, e 1 os valores) )``` - Ordena em ordem<br /> crescente um dicionário com base nos valores
 
-
-
 ## Cores no Terminal Python
+
 ### ANSI
 ```\033[Style;Text;Back;m```
 ```\033[0;33;44m```
-### Style  / Estilo
+### Style
 0 - none <br />
 1 - bold<br />
 4 - underline / sublinhado<br />
 7 - negativo<br />
-### Text / Cores
+### Text
 30 - branco<br />
 31 - vermelho<br />
 32 - verde<br />
@@ -216,7 +314,7 @@ Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br 
 35 - violeta<br />
 36 - ciano<br />
 37 - cinza<br />
-### Back / Fundo
+### Back
 40 - branco<br />
 41 - vermelho<br />
 42 - verde<br />
@@ -231,7 +329,7 @@ Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br 
 ```oct()``` - converter de decimal para Octal<br />
 ```hex()``` - converter de decimal para hexadecimal<br />
 
-## Funções / def
+## Funções
 ### O que é
 São rotinas, que podem ou não retornar valores e podem ou não usar parâmetros<br />
 ### Declaração basica função sem parâmetros
@@ -262,7 +360,7 @@ print(‘-’*10)
 String de documentação, ou seja Help para uma função criada por você<br />
 #### Como criar
 Uma linha após definir a função criar 3 aspas duplas e fechar o que estiver dentro é o ”manual de como usar sua função” <br />
-#### exemplo:
+#### exemplo
 ```
 def funcao(a,b,c):
     “””
@@ -280,8 +378,8 @@ def funcao(a,b,c):
 
 
 
-### argumentos/parâmetros opcionais
-#### O que é:
+### parâmetros opcionais
+#### O que é
 cria Parâmetros que podem ou não serem inseridos sem influenciar na funcionalidade do programa<br />
 #### Como criar
 colocar um valor para uma variável caso ela não for inserida<br />
@@ -296,9 +394,9 @@ print(s)
 
 #### Definição Escopo
 local onde a variável vai existir e onde ela não vai mais existir<br />
-#### Escopo/Variável local
+#### Escopo local
 existe apenas em uma parte do programa<br />
-#### Escopo/Variável global
+#### Escopo global
 existe em todo lugar do programa<br />
 #### Dica
 No python quando definir uma variável global e uma local com o mesmo nome, ele irá criar 2 variáveis diferentes sem ligação, para criar ligação você deverá colocar o comando global<br />
@@ -323,7 +421,7 @@ def funcao(a,b,c):
 return s
 ```
 
-## Modularização / Criar Módulos
+## Modularização
 ### O que é
 a separação do programa principal das funções<br />
 ### Focos
@@ -343,7 +441,7 @@ dentro colocar todas as funções que precisa, após isso no programa principal 
 
 ## Pacotes
 
-### O que é?
+### O que é
 Uma pasta com vários Módulos, podendo separar os módulos por assunto<br />
 ### Como criar
 Apenas criar um pasta, dentro do projeto ele já reconhece que pode potencialmente ser um pacote<br />
@@ -355,7 +453,7 @@ Quando os projetos começam a ficar muito grandes<br />
 ### Tipos de Erros
 #### Sintaxe
 Erros de digitação, o comando digitado não existe<br />
-#### Exceção / Exception
+#### Exceção
 são erros que acontecem por atribuição errada, receber número diferente do esperado e etc<br />
 
 ### Tratamento de Erro
@@ -375,7 +473,7 @@ except: / variante / except Exception as erro:
     executa de qualquer maneira dando certo ou errado
 ```
 
-#### except / Exemplo
+#### except
 você pode criar inúmeros except e especificar para cada um deles qual o erro e como tratar cada um:<br />
 ```
 except TypeError:
@@ -384,12 +482,12 @@ except ValueError:
     Tratamento para o erro ValueError
 ```
 
-## Criação / Manipulação de Arquivo .txt
-### Como Criar/ Preparar para Ler/Salvar/Substituir
+## Manipulação de Arquivo txt
+### Preparar para Ler Salvar Substituir
 
 ```variável = open(‘Caminho que deseja criar/Ler’,Parâmetro)```
 
-### Parâmetros para criar/Ler
+### Parâmetros para criar Ler
 ```‘r’``` - Transforma em uma variável pronta para leitura<br />
 ```‘a’``` - Transforma em uma variável pronta para adicionar texto<br />
 ```‘w’``` - Transforma em um variável pronta para substituir tudo e colocar um novo texto<br />
