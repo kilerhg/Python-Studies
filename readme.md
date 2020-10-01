@@ -491,7 +491,8 @@ except ValueError:
 ```‘r’``` - Transforma em uma variável pronta para leitura<br />
 ```‘a’``` - Transforma em uma variável pronta para adicionar texto<br />
 ```‘w’``` - Transforma em um variável pronta para substituir tudo e colocar um novo texto<br />
-após cada letra pode se colocar o ‘+’ para se caso o arquivo não exista ele cria exemplo: ‘a+’<br />
+após cada letra pode se colocar o ```+``` para se caso o arquivo não exista ele cria, exemplo: ```a+```<br />
+```encoding=’utf-8’``` - Parâmetro Adicional para poder fazer qualquer Edição/Leitura e Salvamento de arquivos com acentos<br />
 
 ### Salvar texto
 
