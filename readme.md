@@ -95,11 +95,11 @@
 
 ## Anotações gerais
 Refinamento sucessivo : particionar um aplicação e realizar testes em quando desenvolve, para por exemplo evitar erros no começo meio, e corrigi los enquanto em fase de desenvolvimento.<br />
-Inverter string digitada com : ```var[::-1]```
+Inverter string digitada com : ```var[::-1]```<br />
 Flag - Ponto de parada<br />
 Consegue-se receber o mesmo valor para várias variáveis utilizando:<br />
-```ex = ex1 = ex2 = ex3 = 0```
-reverse = True - torna algumas funções invertidas ex: ```L.sort()```
+```ex = ex1 = ex2 = ex3 = 0```<br />
+reverse = True - torna algumas funções invertidas ex: ```L.sort()```<br />
 função == Método<br />
 toda função abre e fecha parênteses após o nome ex: f()<br />
 
