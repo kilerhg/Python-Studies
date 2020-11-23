@@ -12,11 +12,19 @@ def main(ui):
         cursor.execute("""CREATE TABLE conta (
         id integer PRIMARY KEY AUTOINCREMENT,
         login text,
-            senha text)""")
+        senha text)""")
         banco.commit()
         banco.close()
     except:
         pass
+
+    def limpar_campos_login():
+        ui.txt_usuario.setText('')
+        ui.txt_senha.setText('')
+
+    def limpar_campos_cadastrar():
+        ui.txt_cadastrar_usuario.setText('')
+        ui.txt_cadastrar_senha.setText('')
 
     def mostrar_msg(titulo,texto):
         titulo = str(titulo)
@@ -40,8 +48,7 @@ def main(ui):
             # print(f'{erro}')
         banco.commit()
         resultado = cursor.fetchall()
-        ui.txt_usuario.setText('')
-        ui.txt_senha.setText('')
+        limpar_campos_login()
         if len(resultado) != 0:
            mostrar_msg('Login Empresa XYZ',f'Olá {usuario}, Bem Vindo')
            #  print(f'Olá {usuario}, Bem Vindo')
@@ -56,15 +63,22 @@ def main(ui):
 
         banco = sqlite3.connect('banco_dados.db')
         cursor = banco.cursor()
-        try:
-            cursor.execute(f"INSERT INTO conta VALUES (NULL,'{usuario_cadastrar}','{senha_cadastrar}')")
-            banco.commit()
-            ui.txt_cadastrar_usuario.setText('')
-            ui.txt_cadastrar_senha.setText('')
-            print('Dados Cadastrados Com Sucesso!!!')
-        except sqlite3.Error as erro:
-            print(f'Erro ao cadastrar: {erro}')
+        cursor.execute(f"SELECT * from conta WHERE login = '{usuario_cadastrar}'")
+        resultado = cursor.fetchall()
+        if len(resultado) != 0:
+            mostrar_msg('Cadastro Empresa XYZ','Usuario Já Cadastrado')
+            print(resultado)
+        elif not usuario_cadastrar.islower():
+            mostrar_msg('Cadastro Empresa XYZ','Digite Apenas Letras Minusculas no Usuario')
+        else:
+            try:
+                cursor.execute(f"INSERT INTO conta VALUES (NULL,'{usuario_cadastrar.lower()}','{senha_cadastrar}')")
+                banco.commit()
+                print('Dados Cadastrados Com Sucesso!!!')
+            except sqlite3.Error as erro:
+                print(f'Erro ao cadastrar: {erro}')
         banco.close()
+        limpar_campos_cadastrar()
 
     ui.btn_enviar.clicked.connect(func_login)
     ui.btn_enviar_4.clicked.connect(func_cadastrar)
