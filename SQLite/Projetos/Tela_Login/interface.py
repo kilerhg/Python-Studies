@@ -151,7 +151,7 @@ class Ui_MainWindow(object):
         self.frame_5.setGeometry(QtCore.QRect(0, 0, 331, 241))
         self.frame_5.setMinimumSize(QtCore.QSize(331, 241))
         self.frame_5.setMaximumSize(QtCore.QSize(331, 241))
-        self.frame_5.setStyleSheet("background-color: rgb(134, 255, 188);")
+        self.frame_5.setStyleSheet("background-color: rgb(220, 151, 255);")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
