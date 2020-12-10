@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1173</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1173</width>
+    <height>530</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1173</width>
+    <height>530</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastrar Produtos</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(128, 199, 203);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;Empresa XYZ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>1131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btn_enviar">
+       <property name="font">
+        <font>
+         <pointsize>22</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Enviar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>771</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Produto</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Marca</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="txt_marca">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Descrição</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="txt_descricao">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Custo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="txt_custo">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Codigo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="txt_codigo">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Fornecedor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="txt_fornecedor">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Preço venda</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="txt_preco">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="txt_produto">
+       <property name="font">
+        <font>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>140</y>
+      <width>331</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>301</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Codigo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txt_pesquisar">
+        <property name="font">
+         <font>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="btn_pesquisar">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>301</width>
+       <height>43</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pesquisar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>761</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;Cadastrar Produtos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_limpar">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>400</y>
+      <width>161</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Limpar</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txt_produto</tabstop>
+  <tabstop>txt_marca</tabstop>
+  <tabstop>txt_descricao</tabstop>
+  <tabstop>txt_custo</tabstop>
+  <tabstop>txt_codigo</tabstop>
+  <tabstop>txt_fornecedor</tabstop>
+  <tabstop>txt_preco</tabstop>
+  <tabstop>btn_enviar</tabstop>
+  <tabstop>txt_pesquisar</tabstop>
+  <tabstop>btn_pesquisar</tabstop>
+  <tabstop>btn_limpar</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_preco</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1016</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>695</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_fornecedor</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1032</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>705</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_codigo</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1009</x>
+     <y>427</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>782</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_custo</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1000</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>763</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_descricao</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>990</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>758</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_marca</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1027</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>764</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_limpar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_produto</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1061</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>726</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

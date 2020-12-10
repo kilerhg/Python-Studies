@@ -1,11 +1,4 @@
-import sqlite3
-
-banco = sqlite3.connect('primeiro_banco.db')
-
-cursor = banco.cursor()
-
-cursor.execute("CREATE TABLE pessoas (nome text, idade integer, email text)")
-
-cursor.execute("INSERT INTO pessoas ('Maria',40,'maria_123@gmail.com')")
-
-banco.commit()
+teste = [1,2,3,4,5,6,7,8,9,10]
+teste_dict = {'teste':10,'telefone':1190}
+print(teste)
+print(teste_dict['telefone'])
