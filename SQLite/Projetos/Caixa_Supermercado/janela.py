@@ -11,7 +11,11 @@ from datetime import datetime
 def main(ui):
     produtos = ['000001', 'PIPOCA', '2.59', '000002', 'MANTEIGA', '4.20']
 
-
+    def definir_troco():
+        total_compra = float(ui.txt_preco.text())
+        dinheiro_recebido = float(ui.txt_dinheiro_recebido.text())
+        troco = dinheiro_recebido - total_compra
+        ui.txt_troco.setText(f'{troco}')
     def definir_preco_total(preco,quantidade,opcao=0):
         if opcao == 1:
             pass
@@ -24,7 +28,8 @@ def main(ui):
                 valor_atual = 0
             else:
                 valor_atual = float(valor_atual)
-            ui.txt_preco.setText(str(valor_atual+valor_adicionar))
+            calculo = valor_atual+valor_adicionar
+            ui.txt_preco.setText(f'{calculo:.2f}')
     def procurar():
         global codigo,produto,preco
         try:
@@ -67,6 +72,8 @@ def main(ui):
         try:
             adicionar_linha_nota(codigo,produto,quantidade,preco)
             definir_preco_total(preco,quantidade)
+            if ui.rd_dinheiro.isChecked():
+                print('a')
         except:
             print('erro')
 
@@ -74,7 +81,13 @@ def main(ui):
     ui.btn_adicionar_produto.clicked.connect(adicionar_nota)
     ui.btn_procurar.clicked.connect(procurar)
 
+#     Mascaras de campos de texto
 
+    # ui.txt_codigo.setValidator(QDoubleValidator(0, 0, 3))
+    ui.txt_codigo.setInputMask("0000")
+    ui.txt_quantidade.setInputMask("000")
+
+#     Mascaras de campos de texto
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

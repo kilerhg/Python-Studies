@@ -539,6 +539,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QLineEdit" name="txt_dinheiro_recebido">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="font">
             <font>
              <pointsize>13</pointsize>
@@ -614,5 +617,198 @@ p, li { white-space: pre-wrap; }
   <tabstop>txt_preco</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>rd_dinheiro</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_dinheiro_recebido</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>755</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rd_cartao</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_dinheiro_recebido</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>734</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>820</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_preco</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_codigo_produto</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_produto</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_preco_unitario</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>475</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_quantidade</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_codigo</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>528</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>832</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_remover_produto</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_troco</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>516</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_dinheiro_recebido</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>763</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cancelar</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>txt_nota</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
