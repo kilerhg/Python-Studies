@@ -3,7 +3,16 @@
 *.xml
 *.pyc
 *.bat
-*.txt
 *.qrc
 SQLite/Projetos/Tela_Login/banco_dados.db
 SQLite/Projetos/Tela_Login/banco_dados.db
+GUI qt5 pyside2/Curso de Qt5 PySide2 GUI by The Grapevine/Aula 02/raiz.txt
+GUI qt5 pyside2/Curso de Qt5 PySide2 GUI by The Grapevine/Aula 20/nomes.txt
+GUI qt5 pyside2/Curso de Qt5 PySide2 GUI by The Grapevine/Aula 20/nomes_1.txt
+Scripts-Python/texto_base.txt
+Scripts-Python/texto_bruto.txt
+Scripts-Python/texto_formatado.txt
+GUI qt5 pyside2/Curso de Qt5 PySide2 GUI by The Grapevine/Aula 20/.txt
+SQLite/Projetos/Caixa_Supermercado/banco_dados.db
+SQLite/Projetos/Caixa_Supermercado/esquema.txt
+SQLite/Projetos/Caixa_Supermercado/banco_dados.db
