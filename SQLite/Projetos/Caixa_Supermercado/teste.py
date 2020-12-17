@@ -58,3 +58,39 @@
 #
 # print(data_agora())
 # datetime.date()
+
+# def teste():
+#     a = 5
+#     b = 5
+#     c = a+b
+#     print('TESTE')
+#
+# def somar(num1,num2):
+#     num1 = int(num1)
+#     num2 = int(num2)
+#     soma = num1 + num2
+#     return soma
+#
+# print(somar(10,6))
+# print(somar(10,1))
+# print(somar(10,5))
+# print(somar(10,3))
+# d = 10
+# a = 2
+# b = 3
+#
+# # c = funcao(a,b)
+# # print(c)
+# print(funcao(a,b))
+# teste()
+# print(d)
+
+
+def funcao(a, b):
+    print('a')
+    d = 10000
+    lista=[]
+    for i in range(1, a + 1):
+      print(i)
+      lista.append(b * i)
+    return lista

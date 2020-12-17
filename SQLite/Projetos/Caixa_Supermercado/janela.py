@@ -9,8 +9,6 @@ from datetime import datetime
 
 
 def main(ui):
-    produtos = ['000001', 'PIPOCA', '2.59', '000002', 'MANTEIGA', '4.20']
-
     try:
         # Criando Banco de dados e Tabelas
         banco = sqlite3.connect('banco_dados.db')
@@ -33,7 +31,6 @@ def main(ui):
         caixa integer,
         codigo integer,
         quantidade integer,
-        preco real,
         data text)""")
         banco.commit()
         banco.close()
@@ -42,7 +39,8 @@ def main(ui):
 
     def data_agora():
         data = str(datetime.today())
-        data = data[:-7]
+        data = str(data[:-7])
+        data.replace(' ','-')
         return data
 
     def mostrar_msg(titulo, texto):
@@ -53,6 +51,42 @@ def main(ui):
         msg.setWindowTitle(f"{titulo}")
         msg.setText(f"{texto}")
         x = msg.exec_()
+
+    def definir_metodo_pagamento():
+        if ui.rd_cartao.isChecked() == False and ui.rd_dinheiro.isChecked() == False:
+            retorno = 'nao selecionado'
+        elif ui.rd_dinheiro.isChecked():
+            retorno = 'DINHEIRO'
+        else:
+            retorno = 'CARTAO'
+        return retorno
+
+    def enviar_banco_notas():
+        caixa = ui.lb_caixa.text()
+        nota = ui.txt_nota.toPlainText()
+        valor = ui.txt_preco.text()
+        banco = sqlite3.connect('banco_dados.db')
+        data = str(data_agora())
+        cursor = banco.cursor()
+        # cursor.execute(f"INSERT INTO notas values (NULL,'{caixa}','{nota}','{valor},'{data}')")
+        cursor.execute(f"INSERT INTO notas values (NULL,'{caixa}','{nota}','{valor}','{data}')")
+        banco.commit()
+
+    def enviar_banco_gestao():
+        global lista_compra
+        caixa = ui.lb_caixa.text()
+        banco = sqlite3.connect('banco_dados.db')
+        data = str(data_agora())
+        cursor = banco.cursor()
+        for x in range(0,len(lista_compra)//2):
+            print(lista_compra)
+            print(x)
+            codigo = lista_compra[x]
+            quantidade = lista_compra[x+1]
+            cursor.execute(f"INSERT INTO gestao values (NULL,'{caixa}','{codigo}','{quantidade}','{data}')")
+            banco.commit()
+        banco.close()
+        lista_compra.clear()
 
     def definir_troco():
         total_compra = float(ui.txt_preco.text())
@@ -83,18 +117,27 @@ def main(ui):
                 if len(str(pesquisar)) < 6:
                     pesquisar = ('0' * (6 - len(str(pesquisar)))) + str(pesquisar)
 
-                codigo_indice = produtos.index(f'{pesquisar}')
-                codigo = produtos[codigo_indice]
-                produto = produtos[codigo_indice + 1]
-                preco = produtos[codigo_indice + 2]
-
-                ui.txt_codigo_produto.setText(f'{codigo}')
-                ui.txt_produto.setText(f'{produto}')
-                ui.txt_preco_unitario.setText(f'{preco}')
+                banco = sqlite3.connect('banco_dados.db')
+                cursor = banco.cursor()
+                cursor.execute(f"""SELECT codigo,produto,preco from produtos WHERE codigo == '{pesquisar}'""")
+                produtos = cursor.fetchall()
+                if len(produtos) != 0:
+                    produtos = produtos[0]
+                    banco.commit()
+                    codigo = produtos[0]
+                    produto = produtos[1]
+                    preco = produtos[2]
+                    ui.txt_codigo_produto.setText(f'{codigo}')
+                    ui.txt_produto.setText(f'{produto}')
+                    ui.txt_preco_unitario.setText(f'{preco}')
+                    banco.close()
+                else:
+                    mostrar_msg('Caixa EMPRESA XYZ','Digite o codigo do produto')
             else:
                 mostrar_msg('Caixa EMPRESA XYZ','Digite o codigo do produto')
         except ValueError as erro:
             mostrar_msg('Caixa EMPRESA XYZ',f'Erro nome: {erro}')
+        ui.txt_troco.setText('')
 
     def adicionar_linha_nota(codigo_produto,produto,quantidade,preco):
         ui.txt_nota.append(f'{codigo_produto:0<6} {"":-<4} {produto: <10} {"":-<4} {quantidade:0>3} {"-" * 4} {preco: >5}')
@@ -112,11 +155,17 @@ def main(ui):
         #         quantidade = produtos[codigo_indice + 2]
         #         preco = produtos[codigo_indice + 3]
         #         adicionar_linha_nota(codigo,produto,quantidade,preco)
-        global codigo, produto, preco, lista_nota
-
+        global codigo, produto, preco, lista_nota, lista_compra
         quantidade = str(ui.txt_quantidade.text()).strip()
+        try:
+            print(lista_compra)
+        except:
+            lista_compra = []
         if len(ui.txt_codigo_produto.text()) != 0:
             try:
+                lista_compra.append(f'{codigo}')
+                lista_compra.append(f'{quantidade}')
+                print(lista_compra)
                 adicionar_linha_nota(codigo,produto,quantidade,preco)
                 definir_preco_total(preco,quantidade)
             except ValueError as erro:
@@ -136,20 +185,31 @@ def main(ui):
         ui.txt_nota.clear()
 
     def enviar_dados():
-            definir_troco()
+            if ui.rd_dinheiro.isChecked():
+                definir_troco()
+                dinheiro_recebido = float(ui.txt_dinheiro_recebido.text())
+                troco = float(ui.txt_troco.text())
+            else:
+                dinheiro_recebido = 0
+                troco = 0
             valor_total = float(ui.txt_preco.text())
-            dinheiro_recebido = float(ui.txt_dinheiro_recebido.text())
-            troco = float(ui.txt_troco.text())
             nota = ui.txt_nota.toPlainText()
-            print('CODIGO ---- NOME PRODU ---- QTD ----  PRECO')
-            print(nota)
-            print('')
-            print('')
-            print('/'*54)
-            print('')
-            print(f'Total: {valor_total:<5.2f} --- Dinheiro: {dinheiro_recebido:<5.2f} ---- Troco: {troco:<5.2f}')
-            print('')
-            print('/'*54)
+            ui.txt_nota.clear()
+            ui.txt_nota.append('')
+            ui.txt_nota.append('/' * 54)
+            ui.txt_nota.append('')
+            ui.txt_nota.append('CODIGO ---- NOME PRODU ---- QTD ----  PRECO')
+            ui.txt_nota.append(nota)
+            ui.txt_nota.append('')
+            ui.txt_nota.append('')
+            ui.txt_nota.append('-'*54)
+            ui.txt_nota.append('')
+            ui.txt_nota.append(f'Total: {valor_total:<5.2f} ---- Dinheiro: {dinheiro_recebido:<5.2f} ')
+            ui.txt_nota.append(f'Metodo de Pagamento: {definir_metodo_pagamento()}')
+            ui.txt_nota.append(f'Troco: {troco:<5.2f}')
+            ui.txt_nota.append(f'Data e hora: {data_agora()}')
+            ui.txt_nota.append('')
+            ui.txt_nota.append('/'*54)
 
 
 
@@ -182,8 +242,11 @@ def main(ui):
         if verificar == 1:
             # print('a')
             enviar_dados()
+            enviar_banco_notas()
+            enviar_banco_gestao()
             limpar_campos()
 
+    lista_compra = ['1']
     ui.lb_caixa.setText('01')
     ui.btn_adicionar_produto.clicked.connect(adicionar_nota)
     ui.btn_procurar.clicked.connect(procurar)
