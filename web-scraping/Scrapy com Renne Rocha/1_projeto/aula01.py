@@ -18,5 +18,21 @@ class AosFatosSpider(scrapy.Spider):
             )
 
     def parse_category(self, response):
-        import ipdb; ipdb.set_trace()
-        pass
+        news = response.css('a.card::attr(href)').getall()
+        for new_url in news:
+            yield scrapy.Request(
+                response.urljoin(new_url),
+                callback=self.parse_new
+            )
+
+    def parse_new(self, response):
+        title = response.css('article h1::text').get()
+        date = " ".join(response.css('p.publish_date::text').get().split())
+        # quotes = ''
+        # status_quotes = ''
+        # url = ''
+        yield {
+            'title': title,
+            'date': date,
+            'url': response.url
+        }
