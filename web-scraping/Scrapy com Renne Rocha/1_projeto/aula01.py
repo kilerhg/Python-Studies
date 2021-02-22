@@ -28,11 +28,15 @@ class AosFatosSpider(scrapy.Spider):
     def parse_new(self, response):
         title = response.css('article h1::text').get()
         date = " ".join(response.css('p.publish_date::text').get().split())
-        # quotes = ''
-        # status_quotes = ''
-        # url = ''
-        yield {
-            'title': title,
-            'date': date,
-            'url': response.url
-        }
+        quotes = response.css('article blockquote p')
+        for quote in quotes:
+            quote_text = quote.css('::text').get()
+            status = quote.xpath(
+                './parent::blockquote/preceding-sibling::figure//figcaption/text()').get()
+            yield {
+                'title': title,
+                'date': date,
+                'quote_text': quote_text,
+                'status': status,
+                'url': response.url
+            }
