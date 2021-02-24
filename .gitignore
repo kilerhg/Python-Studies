@@ -16,3 +16,4 @@ GUI qt5 pyside2/Curso de Qt5 PySide2 GUI by The Grapevine/Aula 20/.txt
 SQLite/Projetos/Caixa_Supermercado/banco_dados.db
 SQLite/Projetos/Caixa_Supermercado/esquema.txt
 SQLite/Projetos/Caixa_Supermercado/banco_dados.db
+*.db
