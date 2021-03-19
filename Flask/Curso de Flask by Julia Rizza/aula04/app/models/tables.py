@@ -1,4 +1,4 @@
-Ufrom app import db
+from app import db
 
 
 class User(db.Model):

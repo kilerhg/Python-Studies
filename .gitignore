@@ -17,3 +17,6 @@ SQLite/Projetos/Caixa_Supermercado/banco_dados.db
 SQLite/Projetos/Caixa_Supermercado/esquema.txt
 SQLite/Projetos/Caixa_Supermercado/banco_dados.db
 *.db
+*.json
+*.db
+*.csv
