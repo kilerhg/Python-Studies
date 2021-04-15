@@ -20,3 +20,4 @@ SQLite/Projetos/Caixa_Supermercado/banco_dados.db
 *.json
 *.db
 *.csv
+*.log
