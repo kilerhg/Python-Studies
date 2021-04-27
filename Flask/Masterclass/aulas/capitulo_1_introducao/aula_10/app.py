@@ -11,7 +11,7 @@ def index():
         content_type=request.content_type,
         method=request.method    
     )
-    return "<a href='/posts'>Posts</a>"
+    return "<a href='/posts'>Posts 2</a>"
 
 @app.route('/response')
 def response():
@@ -35,4 +35,4 @@ def posts(id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

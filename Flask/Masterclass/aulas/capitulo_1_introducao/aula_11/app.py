@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, redirect, url_for
 
 
 app = Flask(__name__)
@@ -11,11 +11,15 @@ def index():
         content_type=request.content_type,
         method=request.method    
     )
-    return "<a href='/posts'>Posts</a>"
+    return "<a href='/posts'>Posts 2</a>"
 
 @app.route('/response')
 def response():
     return 'Uma resposta do servidor'
+
+@app.route('/redirect')
+def redirect_func():
+    return redirect(url_for('response'))
 
 @app.route('/posts')
 @app.route('/posts/<int:id>')
@@ -35,4 +39,4 @@ def posts(id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
