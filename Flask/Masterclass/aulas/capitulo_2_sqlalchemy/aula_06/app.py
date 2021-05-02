@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -17,19 +17,10 @@ class User(db.Model):
         return self.name
 
 
-@app.route("/")
+@app.route('/')
 def index():
-    users = User.query.all()
+    users = User.query.all() # Select * from users.
     return render_template('user.html', users=users)
-
-
-@app.route("/user/delete/<int:id>")
-def delete(id):
-    user = User.query.filter_by(id=id).first()
-    db.session.remove(user)
-    db.session.commit()
-
-    return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=True)
