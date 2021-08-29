@@ -1,0 +1,7 @@
+<h1> {{ user.id }} </h1>
+<h1> {{ user.name }} </h1>
+<h1> {{ user.email }} </h1>
+<h1> {{ user.profile.photo }} </h1>
+
+
+<a href="{{ url_for('delete', id=user.id)}}">Deletar</a>

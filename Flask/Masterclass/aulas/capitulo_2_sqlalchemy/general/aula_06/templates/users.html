@@ -1,0 +1,10 @@
+<body>
+    {% for user in users %}
+    <ul>
+        <li>
+            <a href="{{ url_for('unique', id=user.id)}}">{{ user.name }}</a>
+        </li>
+    </ul>
+    {% endfor %}
+    
+</body>
