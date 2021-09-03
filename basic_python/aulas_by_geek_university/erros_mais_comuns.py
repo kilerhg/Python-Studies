@@ -33,7 +33,6 @@ Exemplos NameError
     teste()
 '''
 
-teste
 
 
 
