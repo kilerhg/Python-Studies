@@ -67,22 +67,29 @@ def timer(func_name):
     return intern
     
 '''
-
-
+# Defining the Decorator Function
 def timer(func):
+    # Importing the datetime module
     from datetime import datetime
+    # Defining the wrapper function
     def wrapper(*args, **kwargs):
-        print(f"Function Name:{getattr(func, '__name__')}")
-        start = datetime.now()
-        func(*args, **kwargs)
-        end = datetime.now()
-        time_to_run = end - start
+        # print the function name
+        print(f"Function Name: {getattr(func, '__name__')}")
+        start = datetime.now() # start time
+        func(*args, **kwargs) # calling the function
+        end = datetime.now() # end time
+        time_to_run = end - start # time to run
+        # print the time to run
         print(f'Time to run: {time_to_run}')
     return wrapper
 
-@timer
-def esperar_5_segundos():
+
+@timer # Decorator
+# Defining the function witch will be decorated
+# in this case, i create a example one
+def wait_5_seconds(): 
+    # Here you write the code to get the time to run
     from time import sleep
     sleep(5)
 
-esperar_5_segundos()
+wait_5_seconds() # calling the function

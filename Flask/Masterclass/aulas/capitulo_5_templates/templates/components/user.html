@@ -1,0 +1,11 @@
+{% macro user_component(users) %}
+
+    {% for user in users %}
+        <ul>
+            <li>Nome: {{user['name']}}</li>
+            <li>Idade: {{user['age']}}</li>
+            <li>Email: {{user['email']}}</li>
+        </ul>
+    {% endfor %}
+
+{% endmacro %}

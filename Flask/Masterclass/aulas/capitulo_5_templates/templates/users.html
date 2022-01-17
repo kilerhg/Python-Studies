@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 
+{% from 'components/user.html' import user_component %}
+
 {% block content %}
 
+
     {% include 'components/notifications.html' %}
+
+    {{ user_component(users) }}
 
 
 {% endblock %}
