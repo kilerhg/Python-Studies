@@ -25,7 +25,7 @@ def post():
     var = request.get_json()
     print(var)
     print(var['algum_valor'])
-    return jsonify('Sucesso'), 200
+    return jsonify('Sucesso'), 200 # nicolas é gato
 
 
 if __name__ == '__main__':
