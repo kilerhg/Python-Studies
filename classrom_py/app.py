@@ -1,12 +1,11 @@
 import logging
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def index():
-    return jsonify({'value': "I'M INDEX"})
-
+    return render_template("a.html")
 
 @app.route("/get", methods=['GET', 'POST'])
 def get():
@@ -30,3 +29,4 @@ def post():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
