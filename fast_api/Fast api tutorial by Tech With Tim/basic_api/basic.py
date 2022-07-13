@@ -3,6 +3,8 @@ import logging
 from typing import Optional
 from pydantic import BaseModel
 
+# run with uvicorn app:app --reload
+
 class Item(BaseModel):
     name : str
     price : float
