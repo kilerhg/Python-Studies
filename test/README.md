@@ -1,4 +1,4 @@
-# Notes about Fast API Studies
+# Notes about Test with Python
 
 ## About
 
@@ -146,7 +146,30 @@ def test_name():
 
 To use the mark, you will need to use the default statement `pytest` with the parameter `-m`, example: `pytest -m mark`
 
-## Coverage percent
+### Coverage
+
+#### Setup
+
+first you need to install the lib pytest-cov, with the following command:
+
+`pip install pytest-cov`
+
+#### Running
+To run the coverage test use:
+
+`pytest --cov`
+
+##### Parameters
+
+There are several userfull parameters to use, like:
+
+`--cov=folder_with_code test/`  - Select the folder you wan't to verify the coverage
+`--cov-report term-missing` - Return the lines that don't have tests
+
+###### Examples of coverage
+
+`pytest --cov=folder_with_code tests/` - Verify the percentage of coverage
+`pytest --cov=folder_with_code tests/ --cov-report term-missing` - Verify percent of coverage and the lines that has missing test
 
 ## Links
 
