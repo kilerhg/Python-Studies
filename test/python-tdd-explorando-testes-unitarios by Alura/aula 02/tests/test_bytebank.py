@@ -63,13 +63,4 @@ class TestClass:
 
         assert result == expect # Then-Assert
 
-    def test_when_str_return_self(self):
-        name, birthday, salario = 'Teste', '12/03/2000', 1000
-        expected = 'Funcionario(Teste, 12/03/2000, 1000)'
-
-        func = Funcionario(name, birthday, salario)
-        result = func.__str__() # When
-
-        assert result == expected # Then-Assert
-
         
