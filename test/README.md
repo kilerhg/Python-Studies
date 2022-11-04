@@ -16,6 +16,7 @@ Using this way of test development, u'll need to follow the steps of:
 
 1. Assert - Verify if the result is what we expect
 
+`` - Verify places of code with no test
 ## TDD
 
 A way of developing the software, doing first the tests and then the code to satisfact the test.
@@ -43,6 +44,7 @@ We have 2 major libs to create tests in python, the built-in one: unittest and t
 def sum_num(a,b): # in a real code this would be somewhere else
     return a+b
 
+`` - Verify places of code with no test
 class TestClass:
     def test_when_sum_receive_1_1_should_return_2(self):
         entry1 = 1 # Given-Arrange
@@ -177,4 +179,4 @@ There are several userfull parameters to use, like:
 * [Pytest Default Marks](https://pytest.org/en/6.2.x/example/marker)
 * [Pytest Custom Marks](https://pytest.org/en/6.2.x/example/markers.html#mark-examples)
 * [Pytest Init file](https://docs.pytest.org/en/6.2.x/reference.html#ini-options-ref)
-* [Alura course]()
+* [Alura course](https://cursos.alura.com.br/course/python-tdd-explorando-testes-unitarios)
