@@ -24,7 +24,7 @@ class TestClass:
         result = lucas.sobrenome()
         assert result == esperado
     
-    @mark.skip
+    #@mark.skip
     def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
         entrada_salario = 100000 # Given
         entrada_nome = 'Paulo Bragança' # Given
@@ -38,7 +38,7 @@ class TestClass:
 
         assert resultado == esperado # Then
     
-    #@mark.calcular_bonus
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
         entry = 1000 # Given
         esperado = 100
@@ -46,7 +46,7 @@ class TestClass:
         result = lucas.calcular_bonus()
         assert result == esperado
     
-    #@mark.calcular_bonus
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000000_deve_retornar_exception(self):
         with pytest.raises(Exception):
             entry = 1000000 # Given

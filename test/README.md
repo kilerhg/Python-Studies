@@ -54,9 +54,29 @@ class TestClass:
         assert result == expect # Then-Assert
 ```
 
+#### Handling Exceptions
+
+Sometimes you may wan't to your test return an exception, then the `raises` of pytest will help you.
+
+##### Using Raises
+
+by using the with sintax, and then writing the code inside of it, the Exceptions will be handled, see an example below.
+
+##### Example of handling exceptions
+
+```python
+def test_name(self):
+  with pytest.raises(Exception):
+      # cotent
+      result = 0/0
+      assert result
+```
+
 #### Filtering
 
 while writing tests, soon you will probably have a lot of tests, and you may want to execute just a few of then, how can you do that?
+
+Tip: you can use the filter with other parameter, example: `pytest -v -k keyword` or `pytest -v -m mark`
 
 ##### Key
 
@@ -66,21 +86,65 @@ Execute the tests that has the key word in the test func name, example: `pytest 
 
 Marks are a good way to label some tests, there are a few [default ones](https://pytest.org/en/6.2.x/mark.html), but you can [create your owns](https://pytest.org/en/6.2.x/example/markers.html#mark-examples).
 
+###### Setup for custom marks
+
+create a file called `pytest.ini` inside the master folder of your project, inside this file write the custom marks you want, example:
+
+```ini
+[pytest]
+markers = 
+    marker_name: Marker Description Here
+```
+
 ###### Creating Marks
 
-###### Setup
-
 to create marks you need to import them from pytest with `from pytest import mark`
-
-###### Using Marks
 
 You will use marks just like other python decorators, example:
 
 ```python
 @mark.name_mark
-def test_name_test(self):
-  # content of test
+def test_name(self):
+  ...
 ```
+
+###### Default Marks
+
+####### Skip
+
+Skip a test always, can specify a reason
+
+```python
+@pytest.mark.skip(reason="write the reason here")
+def test_some():
+    ...
+```
+
+####### SkipIF
+
+Skip a test if the condition is True.
+
+```
+import sys
+
+@pytest.mark.skipif(sys.version_info < (3, 7), reason="Needs python 3.7 or newer")
+def test_name():
+    ...
+```
+
+####### Xfail
+
+The Test should fail
+
+```python
+@pytest.mark.xfail
+def test_name():
+    ...
+```
+
+###### Using Marks
+
+To use the mark, you will need to use the default statement `pytest` with the parameter `-m`, example: `pytest -m mark`
 
 ## Coverage percent
 
@@ -89,3 +153,5 @@ def test_name_test(self):
 * [Pytest Docs](https://pytest.org/en/6.2.x/contents.html)
 * [Pytest Default Marks](https://pytest.org/en/6.2.x/example/marker)
 * [Pytest Custom Marks](https://pytest.org/en/6.2.x/example/markers.html#mark-examples)
+* [Pytest Init file](https://docs.pytest.org/en/6.2.x/reference.html#ini-options-ref)
+* [Alura course]()
