@@ -1,6 +1,6 @@
 # Notes about Fast API Studies
 
-## Creating a simple fastapi API
+## Creating a simple fastapi API 
 
 ```python
 
