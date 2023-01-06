@@ -1,6 +1,6 @@
 # Notes about Fast API Studies
 
-## Creating a simple fastapi API
+## Creating a simple fastapi API 
 
 ```python
 
@@ -11,6 +11,16 @@ app = FastAPI()
 @app.get("/")
 def index():
     return {"message": "Hello World"}
+
+```
+
+## Running the API
+
+run using `uvicorn` or `hypercorn` `file:app` and to debug mode you can use `--reload`
+
+```python
+
+uvicorn app:app --reload
 
 ```
 
@@ -109,6 +119,49 @@ Inside Path you can use the following parameters to specify range of number
 def test(value : int = Path(description="Description of the field", default="Default value", ge=0))
 ```
 
+## Background Tasks
+
+Is an FastAPI's native alternative to async API calls, such as celery.
+
+### Importing
+
+```python
+from fastapi import FastAPI, BackgroundTasks
+```
+
+### Creating async func with BackgroundTasks
+
+The only difference from a default python function is the async before, and inside you pass the parameter `background_tasks: BackgroundTasks`.
+
+```python
+@app.get("/endpoint")
+async def function(background_tasks: BackgroundTasks):
+```
+
+### Adding tasks to BackgroundTasks
+
+You can add up to many tasks you want, following the syntax: `background_tasks.add_task(function_name, **kwargs, *args)`
+
+```python
+background_tasks.add_task(some_func, 'parameters')
+return {'result': 'success'}, 200
+```
+
+### Example of Background Tasks
+
+In this following example the request will return before the task is done itself.
+
+```python
+def send_email(message):
+    sleep(5)
+    print(message)
+
+@app.get("/async")
+async def index(background_tasks: BackgroundTasks):
+    background_tasks.add_task(send_email, 'Test')
+    background_tasks.add_task(send_email, 'Test1')
+    return {'result': 'success'}, 200
+```
 
 ## Links
 
