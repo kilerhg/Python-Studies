@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, List, Dict
 
 from fastapi import FastAPI, Body, Depends
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -9,7 +9,7 @@ from auth.auth_handler import signJWT, decodeJWT
 
 
 class UserModel(BaseModel):
-    id : int
+    id : str
     username : str
     password : str
 
@@ -33,9 +33,9 @@ async def protected(user: str = Depends(JWTBearer())) -> dict:
     
     return user
 
-# @app.post("/posts", dependencies=[Depends(JWTBearer())], tags=["posts"])
-# async def add_post() -> dict:
+@app.post("/posts", dependencies=[Depends(JWTBearer())], tags=["posts"])
+async def add_post() -> dict:
     
-#     return {
-#         "msg": f"Hello 1"
-#     }
+    return {
+        "msg": f"Hello 1"
+    }

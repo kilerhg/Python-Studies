@@ -1,7 +1,8 @@
 import time
 from typing import Dict
 
-import jwt
+from jose import JWTError, jwt
+from fastapi import HTTPException, status
 
 JWT_SECRET = '--very secret key--'
 JWT_ALGORITHM = 'HS256'
@@ -17,9 +18,8 @@ def token_response(token: str):
 
 def signJWT(user_id: str) -> Dict[str, str]:
     payload = {
-        "user_id": user_id,
-        "expires": time.time() + HOUR,
-        "type": 'two_auth'
+        "sub": user_id,
+        "exp": time.time() + HOUR,
     }
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
@@ -28,10 +28,10 @@ def signJWT(user_id: str) -> Dict[str, str]:
 def decodeJWT(token: str) -> dict:
     try:
         decoded_token = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
-        return decoded_token if decoded_token["expires"] >= time.time() else None
-    except Exception as erro:
-        print(erro)
-        return {}
+        return decoded_token
+    except JWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid or expired token")
+        
 
 if __name__ == '__main__':
     token = signJWT(1)
