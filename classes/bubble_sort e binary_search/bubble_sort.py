@@ -12,6 +12,7 @@ def bubble_sort(array):
                 print(f"comparando: {sorting_array[pos]} > {sorting_array[pos+1]} - {sorting_array[pos] > sorting_array[pos+1]}")
                 if sorting_array[pos] > sorting_array[pos+1]:
                     print(sorting_array)
+                    print()
                     sorting_array[pos], sorting_array[pos+1] = sorting_array[pos+1], sorting_array[pos] # Invertendo o numero caso seja maior
                     all_valid.append(False)
                 else:
@@ -19,7 +20,8 @@ def bubble_sort(array):
         all_sorted = all(all_valid) # Verificando se nessa iteração nenhuma alteração foi feita
     return sorting_array
 
-array_unsorted = [1, 7, 3, 2, 4, 6, 5, 8, 9, 10]
+# array_unsorted = [1, 7, 3, 2, 4, 6, 5, 8, 9, 10]
+array_unsorted = [1, 3, 2, 5, 4]
 
 print(array_unsorted)
 print()
