@@ -6,7 +6,6 @@ apptitle = 'Postech Obesity Predictor'
 
 st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
 
-
 st.title('Obesity Predictor')
 
 st.sidebar.subheader('Input Values')
