@@ -21,3 +21,5 @@ SQLite/Projetos/Caixa_Supermercado/banco_dados.db
 *.db
 *.csv
 *.log
+.temp
+.venv/
