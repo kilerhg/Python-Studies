@@ -1,3 +1,5 @@
+# [🇧🇷 Português](./readme.md) [🇪🇸 Español](./readme_es.md) [🇺🇸 English](./readme_en.md)
+
 # Anotações Python
 
 ## Sumário

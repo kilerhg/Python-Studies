@@ -1,23 +1,117 @@
-  
+# [🇧🇷 Português](./readme.md) [🇪🇸 Español](./readme_es.md) [🇺🇸 English](./readme_en.md)
 
-  
-  
-````markdown
-# 
-# ### Ler arquivo de texto
+# Python Notes
 
+## Summary
+
+* [Python Notes](#python-notes)
+* [Summary](#summary)
+* [General Notes](#general-notes)
+* [Primitive Types](#primitive-types)
+* [Arithmetic Operations](#arithmetic-operations)
+* [Order Of Precedence](#order-of-precedence)
+* [Print Notes](#print-notes)
+* [Libraries](#libraries)
+  * [Math](#math)
+  * [Random](#random)
+  * [Time](#time)
+  * [Datetime](#datetime)
+  * [Operator](#operator)
+  * [Urllib](#urllib)
+* [Manipulação De Texto](#manipulação-de-texto)
+  * [Location](#location)
+  * [Transformations](#transformations)
+  * [Division](#division)
+  * [Joining](#joining)
+* [Estrutura Condicional Simple E Composta](#estrutura-condicional-simple-e-composta)
+  * [Types](#types)
+  * [Sequential](#sequential)
+  * [Pythonize](#pythonize)
+  * [Simple](#simple)
+  * [Compound](#compound)
+  * [Nested](#nested)
+  * [If](#if)
+* [Estrutura De Repetição Ou Laços Ou Iterações](#estrutura-de-repetição-ou-laços-ou-iterações)
+  * [Loop With Control Variable](#loop-with-control-variable)
+    * [For](#for)
+  * [Loop With Logical Test](#loop-with-logical-test)
+    * [While](#while)
+* [Coleções](#coleções)
+  * [Notes](#notes)
+  * [Tuples](#tuples)
+  * [Lists](#lists)
+  * [Dictionaries](#dictionaries)
+* [Cores No Terminal Python](#cores-no-terminal-python)
+  * [Ansi](#ansi)
+  * [Style](#style)
+  * [Text](#text)
+  * [Back](#back)
+* [Conversão Base De Dados](#conversão-base-de-dados)
+* [Functions](#functions)
+  * [What Is It](#what-is-it)
+  * [Basic Function Declaration Without Parameters](#basic-function-declaration-without-parameters)
+  * [Basic Function Declaration With Parameters](#basic-function-declaration-with-parameters)
+  * [Pack Parameters - Receive Multiple Parameters](#pack-parameters---receive-multiple-parameters)
+  * [Interactive Help](#interactive-help)
+  * [Docstrings](#docstrings)
+    * [What Is It](#what-is-it)
+    * [How To Create](#how-to-create)
+    * [Example](#example)
+  * [Optional Parameters](#optional-parameters)
+    * [What Is It](#what-is-it)
+    * [How To Create](#how-to-create)
+    * [Example](#example)
+  * [Variable Scope](#variable-scope)
+    * [Scope Definition](#scope-definition)
+    * [Local Scope](#local-scope)
+    * [Global Scope](#global-scope)
+    * [Hint](#hint)
+    * [Example](#example)
+  * [Return Results](#return-results)
+    * [How To Create](#how-to-create)
+    * [Example](#example)
+* [Modularização](#modularização)
+  * [What Is It](#what-is-it)
+  * [Focus](#focus)
+  * [How To Create](#how-to-create)
+  * [Advantages](#advantages)
+* [Pacotes](#pacotes)
+  * [What Is It](#what-is-it)
+  * [How To Create](#how-to-create)
+  * [When To Use](#when-to-use)
+* [Error Handlings E Exceções](#error-handlings-e-exceções)
+  * [Error Types](#error-types)
+    * [Syntax](#syntax)
+    * [Exception](#exception)
+  * [Error Handling](#error-handling)
+    * [What Is It](#what-is-it)
+    * [How To Create](#how-to-create)
+    * [Example](#example)
+    * [Except](#except)
+* [Manipulação De Arquivo Txt](#manipulação-de-arquivo-txt)
+  * [Prepare To Read Save Replace](#prepare-to-read-save-replace)
+    * [Parameters To Create Read](#parameters-to-create-read)
+  * [Save Text](#save-text)
+  * [Read Text File](#read-text-file)
+
+
+## General Notes
+Successive refinement: partition an application and run tests while developing it, for example to avoid errors early on, and correct them while in the development phase.<br />
+Invert typed string with: ```var[::-1]```<br />
+Flag - Stopping point<br />
+You can get the same value for multiple variables using:<br />
 ```ex = ex1 = ex2 = ex3 = 0```<br />
 reverse = True - torna algumas funções invertidas ex: ```L.sort()```<br />
 função == Método<br />
 toda função abre e fecha parênteses após o nome ex: f()<br />
 
-## Tipos Primitivos
+## Primitive Types
 * int - inteiro
 * bool - booleano / true , false
 * float - números com vírgula
 * str - cadeia de texto
 
-## Operações Aritméticas
+## Arithmetic Operations
 * Adição: +
 * Subtração: -
 * Multiplicação: *
@@ -28,192 +122,185 @@ toda função abre e fecha parênteses após o nome ex: f()<br />
 * Comparação: ==
 * Recebe: =
 
-## Ordem de precedência
+## Order Of Precedence
 1. :()
 1. :**
 1. :*,/,//,%
 1. :+,-
-## Anotações Print
+## Print Notes
 
 dentro de um print com f string ou .format pode se utilizar ```:.3f``` dentro das chaves para definir apenas 3 número após o ponto flutuante<br />
-```end=' '``` does not break the line<br />
-```\n``` - quebra a linha
-3 aspas duplas para pegar mais de uma linha
-f string - ```f'teste : {variável}'```
-# 
-# ## Bibliotecas
-# 
-# ### Math
+```end=’ ’``` não quebra a linha<br />
+```\n``` - quebra a linha<br />
+3 aspas duplas para pegar mais de uma linha<br />
+f string - ```f‘teste : {variável}’```
 
-```ceil(N)``` : round up<br />
+## Libraries
+
+### Math
+```ceil(N)``` : arredonda para cima<br />
 ```floor(N)``` : arredonda para baixo<br />
-```trunc(N)``` : truncate decimals without rounding<br />
+```trunc(N)``` : reduz casas decimais sem arredondar<br />
 ```pow(N)``` : potência<br />
-```sqrt(N)``` : square root<br />
+```sqrt(N)``` : raiz quadrada<br />
 ```factorial(N```) : fatorial<br />
 
 ### Random
 
-```random()``` : generates a random number between 0 and 1<br />
+```random()``` : gera número aleatório entre  0 e 1<br />
 ```randint(numero inicial,Numero Final)``` : gera um número aleatório inteiro em que é possível escolher o range<br />
-```shuffle(L)``` : shuffles a list<br />
-# 
-# ### Time
+```shuffle(L)``` : Embaralha uma lista<br />
 
-```sleep(seconds)```: causes the process to wait the defined amount of time before continuing execution<br />
-# 
-# ### Datetime
+### Time
 
-```date.today().year``` : current year<br />
-# 
-# ### Operator
+```sleep(segundos)```: faz o processo aguardar a quantidade de tempo definido antes de continuar a execução<br />
 
-```itemgetter``` - used to fetch items inside dictionaries<br />
-# 
-# ### Urllib
+### Datetime
 
-```urllib.request.urlopen(URL)``` - attempts to access a website<br />
+```date.today().year``` : ano atual<br />
+
+### Operator
+
+```itemgetter``` - usado para buscar itens dentro de dicionários<br />
+
+### Urllib
+
+```urllib.request.urlopen( Url de algum site )``` - tenta acessar algum site<br />
 ```variavel_com_url_site.getcode()``` - Retorna um código para a tentativa de acesso sendo 200 bem sucedido.<br />
 
-## Manipulação de texto
+## Manipulação De Texto
 
-### Localização
+### Location
 
-```frase[9:21]``` - returns the value of frase starting at position 9 up to 20 (python ignores the last index)<br />
+```frase[9:21]``` - Retorna o valor de frase começando na posição 9 e indo até a 20 (o python desconsidera a última)<br />
 ```len(f)``` - quantidade de caracteres em uma string ou lista<br />
-```(T).count()``` - counts occurrences of a character inside a string/list<br />
+```(T).count()``` - conta a quantidade de um caracter dentro de uma string / list<br />
 ```(T).find()``` - mostra a posição de um caracter dentro de uma string / lista. se não existir ele retorna -1<br />
-```(T).index(value, start)``` - shows the position of the searched value inside a composite variable
+```(T).index(Valor procurado, Início)``` - mostra a posição  do valor procurado dentro de uma variável composta<br />
 ```in``` - retorna valor booleano<br />
-```del(variable)```
+```del(Variável)```
  
+
 
 ### Transformations
 ```replace()``` - Substitui uma string/valor de lista por outra string digitada<br />
-```upper()``` - makes a string uppercase
+```upper()``` - Deixa uma string em maiúsculo<br />
 ```lower()``` - Deixa uma string em minúsculas<br />
-```capitalize()``` - makes a string lowercase and capitalizes the first letter
+```capitalize()``` - Deixa uma string em minúscula e coloca a primeira letra em maiúscula<br />
 ```title()``` - Deixa cada palavra em uma string em maiúscula<br />
-```strip()``` - removes useless spaces at the beginning and end of a string
+```strip()``` - Remove os espaços inúteis antes do começo da string e no final<br />
 ```rstrip()``` - Remove os espaços da direita<br />
-```lstrip()``` - removes left-side spaces
+```lstrip()``` - Remove os espaços da esquerda<br />
 ```string.center(Número de caracteres)``` - Centraliza o texto no Números de caracteres definidos<br />
 
-### Divisão
+### Division
 
-```split()``` - splits a string into a list<br />
-# 
-# ### Junção
+```split()``` - Divide uma string em uma lista<br />
 
-```'separator'.join(text)``` - joins a string // example '-'.join(text) joins the string and separates by '-'<br />
-```zfill(número)``` - adiciona uma quantidade de zeros a uma string
-# 
-# ## Estrutura Condicional simples e composta
-# 
-# ### Tipos
-# 
-# #### Sequencial
-# 
-# roda o programa de forma linear de cima para baixo executando todos os comandos
-# 
-# #### Pythonizar
-# 
-Escreva tudo em uma linha exemplo:``` print('1' if var <=3 else '2')```
-# 
-# #### Simples
-# 
-# Ele executa apenas um bloco condicional
-# 
-# #### Composto
-# 
-executa mais de um bloco condicional ex : else
-# 
-# #### Ninhadas
-# 
-# Condições dentro de condições
-# 
-# ### if
+### Joining
+```'separador'join(frase)``` - junta um string // exemplo ‘-’.join(frase) junta a string e separa por ‘-’<br />
+```zfill(número)``` - adiciona uma quantidade de zeros a uma string<br />
 
-```if``` - conditional
-```'r'``` - Transforma em uma variável pronta para leitura
+## Estrutura Condicional Simple E Composta
 
-```Else``` - can only be used once inside the nesting with if or elif
-# ## Estrutura de Repetição ou laços ou Iterações
-# ### Laço com variável de controle
-# 
-# ### for
+### Types
 
-```for x in range(start, end (result is end-1), step (e.g. +1 or -1))```, what is the iteration (e.g. add(1) or subtract(-1)) )<br />
+#### Sequential
+
+runs the program linearly from top to bottom executing all commands<br />
+
+#### Pythonize
+
+Write everything in one line example:``` print('1' if var <=3 else '2')```
+
+#### Simple
+
+It executes only one conditional block<br />
+
+#### Compound
+
+executes more than one conditional block ex : else<br />
+
+#### Nested
+
+Conditions within conditions<br />
+
+### If
+```if``` - ```se```
+```Elif``` - Precisa sempre de um if<br />
+```Else``` - So pode ser utilizado uma vez dentro da Ninhada com if ou elif<br />
+## Estrutura De Repetição Ou Laços Ou Iterações
+### Loop With Control Variable
+
+### For
+
+```for x in range(Número Inicial, Número Final(Sendo o Resultado NF-1)```, qual é a iteração( Exemplo Somar(1) ou subtrair(-1)) )<br />
 ```for x enumerated( Variável Composta )``` retorna o valor e o índice.<br />
 
-### Laço com teste lógico
+### Loop With Logical Test
 
 #### While
-```while not``` (Boolean Value):<br />
+```while not``` (Valor Booleano):<br />
 ```while true```: loop infinito<br />
-```break``` - stops the loop<br />
+```break``` - interrompe o laço de repetição<br />
 ```continue``` - continua o laço e caso o programa rode alguma parte que não contenha o continue sendo que ele existe dentro do mesmo laço ele para<br />
 
 
 
 ## Coleções
 
-### Anotações
+### Notes
 
 Você pode interpolar as coleções, por exemplo: Dicionários Dentro de listas<br />
 
-### Tuplas
+### Tuples
 
 Caracter - ()
 
 Tuplas são Imutaveis
-```sorted(T)``` - sorts the tuple but does not store the result; assign to a variable to keep it
-# 
-# ### Listas
-# 
-Caracter - []
+```sorted(T```) - ordena a tupla porém não armazena o valor, para guardar usar variável<br />
 
-```sum(L)``` - sums all values in a list<br />
+### Lists
+
+Character - []
+
+```sum(L)``` - soma todos os valores de uma lista<br />
 ```L.append()``` - adiciona um valor na lista<br />
-```L[index]``` - shows the item at the indicated position<br />
+```L[índice]``` - mostra o item que está na posição indicada<br />
 ```L.insert(Posição,Valor)``` - adiciona um valor em uma posição selecionada <br />
-```L.remove()``` - removes a value from the list<br />
-Flag - Ponto de parada<br />
-Consegue-se receber o mesmo valor para várias variáveis utilizando:<br />
-```min(L)``` - shows the smallest value in the list
+```L.remove()``` - remove um valor da lista<br />
+```max(L)``` - Mostra maior valor da lista<br />
+```min(L)``` - Mostra o menor valor da lista<br />
 ```(L).sort``` - Ordena a lista<br />
-```del L[index]``` - delete an item from a list by index
+```del L[Índice]``` - Deletar um item de uma lista pelo Índice escolhido<br />
 ```L.pop(Índice)``` - Deletar um item de uma lista pelo Índice escolhido ou se não for entregue argumento ele remove o último valor.<br />
-```L.remove(value)``` - remove the item searched by its value
-```L1 = L2``` - o sinal '=' faz um ligação entre as listas, onde a mudança de um afeta o outro
-
-```L1 = L2[:]``` - copies the list without linking
+```L.remova(valor)``` - Remova o item procurado pelo valor(Conteúdo) definido<br />
+```L1 = L2``` - o sinal ‘=’ faz um ligação entre as listas, onde a mudança de um afeta o outro<br />
+```L1 = L2[:]``` - copia a lista, não tendo ligação<br />
 ```L1.append(L2[:])``` - Copia a list L2 para Dentro da lista L1<br />
-```L1 = [['Value1','Value2'],['Value1','Value2']]``` - declares a list inside a list
+```L1 = [[‘Valor1’,’Valor2’],[‘Valor1’,’Valor2’]]``` - Declara uma lista dentro de lista<br />
 ```print(L[0][0])``` - mostra o índice 0 dentro da lista [0]<br />
-```L.clear()``` - clears a list
+```L.clear()``` - Limpa uma lista<br />
 ```L.choice``` - Escolhe um item aleatoriamente dentro da lista<br />
 
-### Dicionários
+### Dictionaries
 
-Caracter - {}
+Character - {}
 
-Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br />
+Main difference between a list : Has Literal indexes (Letters/Words)<br />
 
-```D['LiteralIndex'] = 'Value'``` - adds a value to the variable<br />
-```del D['Índice Literal']``` - Deleta o valor que está no índice digitado. 
-
-```D.values()``` - returns the values<br />
+```D[‘Índice Literal’]``` = ‘Valor’ - Adiciona um valor a variável<br />
+```del D[‘Índice Literal’]``` - Deleta o valor que está no índice digitado. <br />
+```D.values()``` - Retorna os Valores<br />
 ```D.keys()``` - Retorna os Índices Literais<br />
-```D.items()``` - returns both keys and values
+```D.items()``` - Retorna tanto os Índices(Keys), como os Valores(values)<br />
 ```D.copy()``` - Copia os valores de um dicionário sem fazer relação, (para utilização em laços e ETC)<br />
-```D1 = sorted(D2.items(), key=itemgetter(index_of_dictionary_where_0_is_keys_and_1_is_values))``` - sorts a dictionary in ascending order based on values
-# 
-# ## Cores no Terminal Python
-# 
-# ### ANSI
+```D1 = sorted(D2.items(), key=itemgetter(índice do dicionário sendo 0 as keys, e 1 os valores) )``` - Ordena em ordem<br /> crescente um dicionário com base nos valores
 
-`````\033[Style;Text;Back;m`````
+## Cores No Terminal Python
+
+### Ansi
+```\033[Style;Text;Back;m```
 ```\033[0;33;44m```
 ### Style
 0 - none <br />
@@ -238,23 +325,22 @@ Principal diferença entre a lista : Tem índices Literais (Letras/Palavras)<br 
 45 - violeta<br />
 46 - ciano<br />
 47 - cinza<br />
-## Conversão Base de dados
+## Conversão Base De Dados
 
-```bin()``` - convert decimal to binary<br />
-```Elif``` - Precisa sempre de um if<br />
-```hex()``` - convert decimal to hexadecimal<br />
+```bin()``` - converter de decimal para binário<br />
+```oct()``` - converter de decimal para Octal<br />
+```hex()``` - converter de decimal para hexadecimal<br />
 
-## Funções
-### O que é
-São rotinas, que podem ou não retornar valores e podem ou não usar parâmetros<br />
-### Declaração basica função sem parâmetros
+## Functions
+### What Is It
+They are routines, which may or may not return values and may or may not use parameters<br />
+### Basic Function Declaration Without Parameters
 ```
-def function():
- Routine/algorithm
+def funcao():
+ Rotina/algoritmo
  ```
     
-### Basic function declaration with parameters
-
+### Basic Function Declaration With Parameters
 
 ```
 def function(parameter):
@@ -262,18 +348,21 @@ def function(parameter):
     print(parameter)
 print('-'*10)
 ```
- 
-### Packing parameters - accept multiple parameters
-```oct()``` - converter de decimal para Octal<br />
-```help(built_in_function)``` - returns help about a built-in function <br />
-# 
-# ### docstrings
-# #### O que é
-# String de documentação, ou seja Help para uma função criada por você
-# #### Como criar
-# Uma linha após definir a função criar 3 aspas duplas e fechar o que estiver dentro é o "manual de como usar sua função" 
-# #### exemplo
 
+### Pack Parameters - Receive Multiple Parameters
+```def contador(*núm)``` - recebe vários parâmetros<br />
+
+
+
+### Interactive Help
+```help(função interna)``` - Retorna uma ajuda sobre uma função interna <br />
+
+### Docstrings
+#### What Is It
+String de documentação, ou seja Help para uma função criada por você<br />
+#### How To Create
+Uma linha após definir a função criar 3 aspas duplas e fechar o que estiver dentro é o ”manual de como usar sua função” <br />
+#### Example
 ```
 def function(a,b,c):
     """
@@ -281,142 +370,136 @@ def function(a,b,c):
     :param a: Description of parameter a
 :param b: Description of parameter b
 :param c: Description of parameter c
-:return: whether the function returns something and if so what it returns
+:return: whether the function returns or not and if so what the return is
     """
-    Here begins the function code
+    Function code starts here
 ```
 
 
 
 
-### optional parameters
-#### O que é
+
+
+### Optional Parameters
+#### What Is It
 cria Parâmetros que podem ou não serem inseridos sem influenciar na funcionalidade do programa<br />
-#### Como criar
+#### How To Create
 colocar um valor para uma variável caso ela não for inserida<br />
-#### Exemplo
+#### Example
 ```
-def function(a,b,c=0 (if c receives no value it will be 0)):
+def function(a,b,c=0(if c receives no value it will receive 0)):
     s = a + b + c
 print(s)
 ```
 
 ### Variable Scope
 
-#### Definição Escopo
+#### Scope Definition
 local onde a variável vai existir e onde ela não vai mais existir<br />
-#### Escopo local
+#### Local Scope
 existe apenas em uma parte do programa<br />
-#### Escopo global
+#### Global Scope
 existe em todo lugar do programa<br />
-#### Dica
+#### Hint
 No python quando definir uma variável global e uma local com o mesmo nome, ele irá criar 2 variáveis diferentes sem ligação, para criar ligação você deverá colocar o comando global<br />
 
-##### Exemplo
+##### Example
 ```
 def function():
     global (variable name)
-    here begins the function code
+    function code starts here
 ```
     
 
-### return values
-```def contador(*núm)``` - recebe vários parâmetros
-# 
-# 
-# 
-# ### Interactive help
+### Return Results
+#### How To Create
 
+colocar o comando return na última linha da função juntamente com uma variável com o valor que deseja retornar<br />
+
+#### Example
 ```
 def function(a,b,c):
     s = a+b+c
 return s
 ```
 
-## Modularization
-# ### O que é
-# a separação do programa principal das funções
-# ### Focos
+## Modularização
+### What Is It
+a separação do programa principal das funções<br />
+### Focus
 * Dividir um programa Grande
 * Aumentar a legibilidade
 * Facilitar a manutenção
-# 
-# ### Como Criar
-# Criar um arquivo .py na mesma pasta que o programa principal com o nome desejado
+
+### How To Create
+Criar um arquivo .py na mesma pasta que o programa principal com o nome desejado<br />
 dentro colocar todas as funções que precisa, após isso no programa principal utilizar ```import nome_do_arquivo```, ou ```from nome_do_arquivo import nome_da_função```
-# 
-# ### Vantagens
+
+### Advantages
 * Organização do código
 * Facilidade na manutenção
 * Ocultação de código detalhado
 * Reutilização em outros projetos
-# 
-# ## Pacotes
-# 
-# ### O que é
-# Uma pasta com vários Módulos, podendo separar os módulos por assunto
-# ### Como criar
-# Apenas criar um pasta, dentro do projeto ele já reconhece que pode potencialmente ser um pacote
-Sempre dentro de um pacote deve-se ter um arquivo chamado: ```__init__.py``` onde irá ficar as funções
-# ### Quando utilizar
-# Quando os projetos começam a ficar muito grandes
-# 
-# ## Tratamento de Erros e Exceções
-# ### Tipos de Erros
-# #### Sintaxe
-# Erros de digitação, o comando digitado não existe
-# #### Exceção
-# são erros que acontecem por atribuição errada, receber número diferente do esperado e etc
-# 
-# ### Tratamento de Erro
-# #### O que é
-# verificar se algo é possível de executar sem resultar em erro, caso tenha problema realizar outro comando
-# #### Como criar
-colocar ```try:``` quebrar linha e escrever o comando que ele deve tentar, depois de escrever o bloco de comando quebra linha '```except:```' quebra linha, e escrever o que fazer caso tenha dado erro, e caso necessário ```else:``` e colocar o que deu certo. ```finally:```, escreve de qualquer maneira com ou sem erro
-# #### Exemplo
 
+## Pacotes
+
+### What Is It
+Uma pasta com vários Módulos, podendo separar os módulos por assunto<br />
+### How To Create
+Apenas criar um pasta, dentro do projeto ele já reconhece que pode potencialmente ser um pacote<br />
+Sempre dentro de um pacote deve-se ter um arquivo chamado: ```__init__.py``` onde irá ficar as funções<br />
+### When To Use
+Quando os projetos começam a ficar muito grandes<br />
+
+## Error Handlings E Exceções
+### Error Types
+#### Syntax
+Erros de digitação, o comando digitado não existe<br />
+#### Exception
+são erros que acontecem por atribuição errada, receber número diferente do esperado e etc<br />
+
+### Error Handling
+#### What Is It
+verificar se algo é possível de executar sem resultar em erro, caso tenha problema realizar outro comando<br />
+#### How To Create
+colocar ```try:``` quebrar linha e escrever o comando que ele deve tentar, depois de escrever o bloco de comando quebra linha ‘```except:```’ quebra linha, e escrever o que fazer caso tenha dado erro, e caso necessário ```else:``` e colocar o que deu certo. ```finally:```, escreve de qualquer maneira com ou sem erro<br />
+#### Example
 ```
 try:
     Command block
 except: / variant / except Exception as error:
-    if an error occurred / variant / print(error.__class__) it shows which error occurred
+    if evaluating resulted in an error / variant / print(error.__class__) it shows what the error was
 (optional) else:
-    if successful
+    if it succeeded
 (optional) finally:
-    executes regardless of success or error
+    executes either way if it succeeded or not
 ```
 
-#### except
-# #### Como criar
-# 
-colocar o comando return na última linha da função juntamente com uma variável com o valor que deseja retornar
-# 
-# #### Exemplo
-
+#### Except
+você pode criar inúmeros except e especificar para cada um deles qual o erro e como tratar cada um:<br />
 ```
 except TypeError:
-    Handling for TypeError.
+    Handling for the TypeError.
 except ValueError:
-    Handling for ValueError
+    Handling for the ValueError
 ```
 
-## Text File Manipulation
-# ### Preparar para Ler Salvar Substituir
+## Manipulação De Arquivo Txt
+### Prepare To Read Save Replace
 
-```variable = open('Path to create/read', Mode)```
+```variável = open(‘Caminho que deseja criar/Ler’,Parâmetro)```
 
-### Parameters to create/read
-```max(L)``` - Mostra maior valor da lista<br />
-```'a'``` - opens for appending<br />
-você pode criar inúmeros except e especificar para cada um deles qual o erro e como tratar cada um:<br />
-```encoding='utf-8'``` - additional parameter to allow editing/reading/saving files with accents<br />
-# 
-# ### Salvar texto
+### Parameters To Create Read
+```‘r’``` - Transforma em uma variável pronta para leitura<br />
+```‘a’``` - Transforma em uma variável pronta para adicionar texto<br />
+```‘w’``` - Transforma em um variável pronta para substituir tudo e colocar um novo texto<br />
+após cada letra pode se colocar o ```+``` para se caso o arquivo não exista ele cria, exemplo: ```a+```<br />
+```encoding=’utf-8’``` - Parâmetro Adicional para poder fazer qualquer Edição/Leitura e Salvamento de arquivos com acentos<br />
 
-```ready_variable_for_[append_or_write].write('desired text\n')``` (the '\n' is optional because it breaks the line, but recommended so multiple writes don't run together)<br />
-```'w'``` - Transforma em um variável pronta para substituir tudo e colocar um novo texto
-após cada letra pode se colocar o ```+``` para se caso o arquivo não exista ele cria, exemplo: ```a+```
+### Save Text
 
-```print(ready_variable_for_reading.read())``` - reads the file value including line breaks<br />
+```variável_pronta_para_[adicionar/substituir]_texto.write(‘texto desejado\n’)``` (o ‘\n’ é opcional pois ele quebra linha, porém é extremamente recomendado pois caso adicione mais de um texto ele não quebra automaticamente a linha)<br />
 
-````
+### Read Text File
+
+```print(variável_pronta_para_ler_texto.read())``` - lê o valor do arquivo inclusive com quebra linhas<br />
