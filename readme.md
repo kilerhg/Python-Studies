@@ -227,8 +227,8 @@ Condições dentro de condições<br />
 
 ### if
 ```if``` - ```se```
-```Elif``` - Precisa sempre de um if<br />
-```Else``` - So pode ser utilizado uma vez dentro da Ninhada com if ou elif<br />
+```elif``` - Precisa sempre de um if<br />
+```else``` - So pode ser utilizado uma vez dentro da Ninhada com if ou elif<br />
 ## Estrutura de Repetição ou laços ou Iterações
 ### Laço com variável de controle
 
