@@ -23,7 +23,7 @@
   * [Transformations](#transformations)
   * [Division](#division)
   * [Joining](#joining)
-* [Estrutura Condicional Simple E Composta](#estrutura-condicional-simple-e-composta)
+* [Simple and Compound Conditional Structures](#estrutura-condicional-simple-e-composta)
   * [Types](#types)
   * [Sequential](#sequential)
   * [Pythonize](#pythonize)
@@ -31,7 +31,7 @@
   * [Compound](#compound)
   * [Nested](#nested)
   * [If](#if)
-* [Estrutura De Repetição Ou Laços Ou Iterações](#estrutura-de-repetição-ou-laços-ou-iterações)
+* [Repetition Structure or Loops or Iterations](#estrutura-de-repetição-ou-laços-ou-iterações)
   * [Loop With Control Variable](#loop-with-control-variable)
     * [For](#for)
   * [Loop With Logical Test](#loop-with-logical-test)
@@ -41,12 +41,12 @@
   * [Tuples](#tuples)
   * [Lists](#lists)
   * [Dictionaries](#dictionaries)
-* [Cores No Terminal Python](#cores-no-terminal-python)
+* [Colors in the Python Terminal](#cores-no-terminal-python)
   * [Ansi](#ansi)
   * [Style](#style)
   * [Text](#text)
   * [Back](#back)
-* [Conversão Base De Dados](#conversão-base-de-dados)
+* [Extra data conversion](#conversão-base-de-dados)
 * [Functions](#functions)
   * [What Is It](#what-is-it)
   * [Basic Function Declaration Without Parameters](#basic-function-declaration-without-parameters)
@@ -198,10 +198,10 @@ f-string - ```f'test : {variable}'```
 ```split()``` - Splits a string into a list<br />
 
 ### Joining
-```'separator'join(phrase)``` - joins a string // example '-'.join(phrase) joins the string and separates it by '-'<br />
+```'separator'.join(phrase)``` - joins a string // example '-'.join(phrase) joins the string and separates it by '-'<br />
 ```zfill(number)``` - adds a certain amount of zeros to a string<br />
 
-## Estrutura Condicional Simple E Composta
+## Simple and Compound Conditional Structures
 
 ### Types
 
@@ -229,7 +229,8 @@ Conditions within conditions<br />
 ```if``` - ```if```
 ```elif``` - Always needs an if beforehand<br />
 ```else``` - Can only be used once in the Nest block with if or elif<br />
-## Estrutura De Repetição Ou Laços Ou Iterações
+
+## Repetition Structure or Loops or Iterations
 ### Loop With Control Variable
 
 ### For
@@ -297,11 +298,12 @@ Main difference between a list : Has Literal indexes (Letters/Words)<br />
 ```D.copy()``` - Copies the values from a dictionary without creating a link, (for using in loops etc)<br />
 ```D1 = sorted(D2.items(), key=itemgetter(dictionary index being 0 for keys, and 1 for values) )``` - Sorts in ascending order<br /> a dictionary based on the values
 
-## Cores No Terminal Python
+## Colors in the Python Terminal
 
 ### Ansi
 ```\033[Style;Text;Back;m```
 ```\033[0;33;44m```
+
 ### Style
 0 - none <br />
 1 - bold<br />
@@ -325,7 +327,8 @@ Main difference between a list : Has Literal indexes (Letters/Words)<br />
 45 - magenta<br />
 46 - cyan<br />
 47 - gray<br />
-## Conversão Base De Dados
+
+## Extra data conversion
 
 ```bin()``` - convert from decimal to binary<br />
 ```oct()``` - convert from decimal to Octal<br />
@@ -420,7 +423,7 @@ place the return command on the last line of the function along with a variable 
 ```
 def function(a,b,c):
     s = a + b + c
-return s
+    return s
 ```
 
 ## Modularização
