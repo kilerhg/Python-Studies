@@ -18,7 +18,7 @@
   * [Datetime](#datetime)
   * [Operator](#operator)
   * [Urllib](#urllib)
-* [Manipulação De Texto](#manipulação-de-texto)
+* [Text Handling](#manipulação-de-texto)
   * [Location](#location)
   * [Transformations](#transformations)
   * [Division](#division)
@@ -36,7 +36,7 @@
     * [For](#for)
   * [Loop With Logical Test](#loop-with-logical-test)
     * [While](#while)
-* [Coleções](#coleções)
+* [Collections](#Collections)
   * [Notes](#notes)
   * [Tuples](#tuples)
   * [Lists](#lists)
@@ -70,16 +70,16 @@
   * [Return Results](#return-results)
     * [How To Create](#how-to-create)
     * [Example](#example)
-* [Modularização](#modularização)
+* [Modules](#Modules)
   * [What Is It](#what-is-it)
   * [Focus](#focus)
   * [How To Create](#how-to-create)
   * [Advantages](#advantages)
-* [Pacotes](#pacotes)
+* [Packages](#Packages)
   * [What Is It](#what-is-it)
   * [How To Create](#how-to-create)
   * [When To Use](#when-to-use)
-* [Error Handlings E Exceções](#error-handlings-e-exceções)
+* [Error Handlings and Exceptions](#error-handlings-e-exceções)
   * [Error Types](#error-types)
     * [Syntax](#syntax)
     * [Exception](#exception)
@@ -88,7 +88,7 @@
     * [How To Create](#how-to-create)
     * [Example](#example)
     * [Except](#except)
-* [Manipulação De Arquivo Txt](#manipulação-de-arquivo-txt)
+* [Handling Txt file](#manipulação-de-arquivo-txt)
   * [Prepare To Read Save Replace](#prepare-to-read-save-replace)
     * [Parameters To Create Read](#parameters-to-create-read)
   * [Save Text](#save-text)
@@ -168,7 +168,7 @@ f-string - ```f'test : {variable}'```
 ```urllib.request.urlopen( URL of a site )``` - attempts to access a site<br />
 ```variable_with_site_url.getcode()``` - Returns a code for the access attempt, with 200 meaning successful.<br />
 
-## Manipulação De Texto
+## Text Handling
 
 ### Location
 
@@ -248,7 +248,7 @@ Conditions within conditions<br />
 
 
 
-## Coleções
+## Collections
 
 ### Notes
 
@@ -426,7 +426,7 @@ def function(a,b,c):
     return s
 ```
 
-## Modularização
+## Modules
 ### What Is It
 the separation of the main program from the functions<br />
 ### Focus
@@ -444,7 +444,7 @@ inside put all the functions you need, after that in the main program use ```imp
 * Hiding detailed code
 * Reusability in other projects
 
-## Pacotes
+## Packages
 
 ### What Is It
 A folder with various Modules, allowing you to separate modules by subject<br />
@@ -454,7 +454,7 @@ Always inside a package you must have a file named: ```__init__.py``` where the 
 ### When To Use
 When projects start to get very large<br />
 
-## Error Handlings E Exceções
+## Error Handlings and Exceptions
 ### Error Types
 #### Syntax
 Typing errors, the typed command does not exist<br />
@@ -487,7 +487,7 @@ except ValueError:
     Handling for the ValueError
 ```
 
-## Manipulação De Arquivo Txt
+## Handling Txt file
 ### Prepare To Read Save Replace
 
 ```variable = open('Path you want to create/Read',Parameter)```
