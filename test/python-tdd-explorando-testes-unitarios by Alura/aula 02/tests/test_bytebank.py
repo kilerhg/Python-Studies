@@ -1,15 +1,19 @@
 from codigo.bytebank import Funcionario
 import pytest
 from pytest import mark
+from datetime import date
 
 def sum_num(a,b):
     return a+b
 
 class TestClass:
-    def test_quando_idade_recebe_13_03_200_deve_retornar_22(self):
-        
+    def test_quando_idade_recebe_13_03_2000_deve_retornar_idade_correta(self):
         entry = '13/03/2000' # Given-Contexto
-        expected = 22
+        # Calculate age: if today is before March 13, age is year - 2000 - 1
+        today = date.today()
+        expected = today.year - 2000
+        if today.month < 3 or (today.month == 3 and today.day < 13):
+            expected -= 1
 
         func = Funcionario('teste', entry, 1111)
         
@@ -62,5 +66,3 @@ class TestClass:
         result = sum_num(entry1, entry2) # When-Action
 
         assert result == expect # Then-Assert
-
-        
